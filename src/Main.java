@@ -6,18 +6,18 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        Shape c =  new Circle(10);
+        Shape c = new Circle(10);
         Shape r1 = new Rectangle(3, 4);
         Shape r2 = new Rectangle(0.1, 20);
         Square s = new Square(5);
-        Triangle t = new Triangle (5, 7, 5);
+        //Triangle t = new Triangle (5, 7, 5);
 
         List<Shape> shapes = new ArrayList<>();
         shapes.add(c);
         shapes.add(r1);
         shapes.add(r2);
         shapes.add(s);
-        shapes. add(t);
+        //shapes.add(t);
 
         System.out.println("Unsorted shapes");
         printList(shapes);
@@ -46,7 +46,8 @@ public class Main {
 
         System.out.println("After sorting");
         Collections.sort(numbers);
-        for (Integer number :  numbers){
+        for (Integer number : numbers) {
             System.out.println(number);
         }
     }
+}
