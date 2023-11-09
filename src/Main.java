@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List;
+
 
 public class Main {
 
@@ -48,6 +49,44 @@ public class Main {
         Collections.sort(numbers);
         for (Integer number : numbers) {
             System.out.println(number);
+        }
+        
+        Person p1 = new Person("Eduard", "Munch");
+        Person p2 = new Person("Eduard", "Stradivarius");
+        Person p3 = new Person("Michael", "Keaton");
+        Person p4 = new Person("Javier", "Bil");
+
+        List<Person> persons = new LinkedList<>();
+        persons.add(p1);
+        persons.add(p2);
+        persons.add(p3);
+        persons.add(p4);
+
+        for (Person p: persons){
+            System.out.println(p);
+        }
+
+        Collections.sort(persons, new PersonFirstNameComparator());
+        System.out.println("*** After sorting by first name ***");
+        for (Person p: persons){
+            System.out.println(p);
+        }
+
+        Collections.sort(persons, new PersonLastNameComparator());
+        System.out.println("*** After sorting by last name ***");
+        for (Person p: persons){
+            System.out.println(p);
+        }
+
+        Collections.sort(persons, new PersonLastNameLengthComparator());
+        System.out.println("*** After sorting by last name length ***");
+        for (Person p: persons){
+            System.out.println(p);
+        }
+    }
+    public static void printList(List<Shape> shapes) {
+        for (Shape shape : shapes) {
+            System.out.println(shape.toString());
         }
     }
 }
